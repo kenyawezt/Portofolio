@@ -1,0 +1,214 @@
+/* Custom styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    color: #111827; /* text-gray-900 */
+}
+/* Offset for fixed header */
+html {
+    scroll-padding-top: 80px;
+}
+.portfolio-item {
+    transition: transform 0.3s ease, opacity 0.5s ease;
+}
+.portfolio-item.hidden {
+    transform: scale(0.9);
+    opacity: 0;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: transform 0.3s ease, opacity 0.3s ease, width 0s 0.3s, height 0s 0.3s, padding 0s 0.3s, margin 0s 0.3s;
+}
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem; /* rounded-md */
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+.filter-btn.active {
+    background-color: #3b82f6; /* bg-blue-500 */
+    color: white;
+    border-color: #3b82f6;
+}
+.filter-btn:not(.active) {
+    background-color: #f3f4f6; /* bg-gray-100 */
+    color: #4b5563; /* text-gray-600 */
+}
+.filter-btn:not(.active):hover {
+    background-color: #e5e7eb; /* bg-gray-200 */
+}
+
+.halftone-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.5;
+    background-image: 
+        radial-gradient(circle at 1px 1px, rgba(0,0,0,0.08) 1px, transparent 0),
+        linear-gradient(to right, #fee2e2, #e0f2fe); /* Warna merah di kiri */
+    background-size: 4px 4px, 100% 100%;
+    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+
+.halftone-bg-achievements {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+    background-image: 
+        radial-gradient(circle at 1px 1px, rgba(0,0,0,0.08) 1px, transparent 0),
+        linear-gradient(to right, #dbeafe, #e0f2fe);
+    background-size: 4px 4px, 100% 100%;
+    mask-image: linear-gradient(to bottom, transparent, black 20%, black 80%, transparent);
+}
+.grid-bg-about {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        linear-gradient(to right, #e5e7eb 1px, transparent 1px),
+        linear-gradient(to bottom, #e5e7eb 1px, transparent 1px);
+    background-size: 2rem 2rem; /* 32px grid */
+    z-index: -1;
+    opacity: 0.4;
+}
+
+/* Font artistik pengganti Amsterdam Four */
+.font-amsterdam {
+    font-family: 'Dancing Script', cursive;
+}
+
+/* General Slider Button Styling */
+.project-slider .swiper-button-prev,
+.project-slider .swiper-button-next {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    color: #3b82f6;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+}
+
+.project-slider .swiper-button-prev:hover,
+.project-slider .swiper-button-next:hover {
+    background-color: #3b82f6;
+    color: white;
+    transform: scale(1.1);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    font-size: 18px !important;
+    font-weight: 800;
+}
+
+/* Specific positioning for Project Slider */
+.project-slider .swiper-button-prev {
+    left: 0px;
+}
+
+.project-slider .swiper-button-next {
+    right: 0px;
+}
+
+/* Specific styling for Experience Slider button */
+.experience-slider .swiper-button-prev {
+    display: none !important;
+}
+.experience-slider .swiper-button-next {
+    display: flex !important;
+    right: 10px; /* Adjust position to be inside the container */
+    width: auto;
+    height: auto;
+    background-color: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    color: #3b82f6;
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+ .experience-slider .swiper-button-next:hover {
+    background-color: transparent;
+    color: #1d4ed8; /* Warna biru lebih gelap saat hover */
+    transform: scale(1.2);
+}
+.experience-slider .swiper-button-next::after{
+    font-size: 24px !important;
+}
+
+
+/* Animasi kursor mengetik */
+.blinking-cursor {
+    animation: blinking-cursor 0.8s infinite;
+}
+@keyframes blinking-cursor {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Animasi Pop-up dari Bawah saat Page Load */
+.initial-hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.initial-hidden.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Flip Card Specific Styles */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.flip-card {
+    background-color: transparent;
+    cursor: pointer;
+    width: 100%;
+    max-width: 24rem; /* Ukuran kartu yang disatukan, sama dengan `max-w-sm` */
+    margin: auto; /* Untuk memusatkan kartu di dalam container flex */
+    aspect-ratio: 4 / 5; /* Disesuaikan agar sedikit lebih tinggi */
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.7s;
+    transform-style: preserve-3d;
+}
+
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex; /* For centering content on the back */
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #ffffff; /* Ganti dari biru ke putih */
+    color: #111827; /* Ganti warna teks agar terlihat di bg putih */
+}
+

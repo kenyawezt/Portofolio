@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio | Kadek Wahyu Alpha</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- SwiperJS CSS for Slider -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <!-- Google Fonts: Poppins & Dancing Script -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="antialiased">
+
+    <!-- Header / Navigation Bar -->
+    <header id="main-header" class="fixed top-0 left-0 right-0 z-40 transition-all duration-300 bg-white/70 backdrop-blur-sm">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#beranda" id="animated-logo" class="text-3xl font-bold text-gray-800 tracking-wider h-9 flex items-center">
+                <!-- Nama akan diisi oleh JavaScript -->
+            </a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#tentang" class="nav-link text-gray-600 hover:text-blue-500 transition border-b-2 border-transparent hover:border-blue-500 pb-1">About</a>
+                <a href="#projects" class="nav-link text-gray-600 hover:text-blue-500 transition border-b-2 border-transparent hover:border-blue-500 pb-1">Projects</a>
+                <a href="#portofolio" class="nav-link text-gray-600 hover:text-blue-500 transition border-b-2 border-transparent hover:border-blue-500 pb-1">Portfolio</a>
+                <a href="#experience" class="nav-link text-gray-600 hover:text-blue-500 transition border-b-2 border-transparent hover:border-blue-500 pb-1">Experience</a>
+                <a href="#achievements" class="nav-link text-gray-600 hover:text-blue-500 transition border-b-2 border-transparent hover:border-blue-500 pb-1">Achievements</a>
+                <a href="#kontak" class="nav-link text-gray-600 hover:text-blue-500 transition border-b-2 border-transparent hover:border-blue-500 pb-1">Contact</a>
+            </nav>
+            <button id="menu-btn" class="md:hidden text-gray-700">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-200">
+             <nav class="flex flex-col items-center space-y-4 py-4">
+                <a href="#tentang" class="mobile-link text-gray-600 hover:text-blue-500 transition">About</a>
+                <a href="#projects" class="mobile-link text-gray-600 hover:text-blue-500 transition">Projects</a>
+                <a href="#portofolio" class="mobile-link text-gray-600 hover:text-blue-500 transition">Portfolio</a>
+                <a href="#experience" class="mobile-link text-gray-600 hover:text-blue-500 transition">Experience</a>
+                <a href="#achievements" class="mobile-link text-gray-600 hover:text-blue-500 transition">Achievements</a>
+                <a href="#kontak" class="mobile-link text-gray-600 hover:text-blue-500 transition">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section id="beranda" class="w-full flex items-center justify-center bg-white pt-20 relative initial-hidden">
+            <div class="hero-image-link cursor-pointer" data-src="images/porto2.svg">
+                <img src="images/porto2.svg" alt="Hero Section Portfolio Wahyu Alpha" class="w-full h-auto">
+            </div>
+            <!-- Animasi Scroll Down -->
+            <a href="#tentang" class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce p-2">
+                <svg class="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+            </a>
+        </section>
+
+        <!-- 2. Tentang Saya Section -->
+        <section id="tentang" class="py-20 relative overflow-hidden initial-hidden">
+             <div class="grid-bg-about"></div>
+            <div class="container mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-center relative">
+                <!-- Kolom Gambar -->
+                <div class="flex justify-center items-center">
+                    <div id="profile-flip-card" class="flip-card w-full relative perspective-1000">
+                        <div class="flip-card-inner relative w-full h-full text-center transition-transform duration-700 ease-in-out">
+                            <!-- Front side: Profile Picture -->
+                            <div class="flip-card-front absolute w-full h-full backface-hidden rounded-2xl shadow-lg">
+                                <img src="images/profile.svg" alt="Kadek Wahyu Alpha" class="rounded-2xl w-full h-full object-cover">
+                            </div>
+                            <!-- Back side: Undiksha Logo -->
+                            <div class="flip-card-back absolute w-full h-full backface-hidden rounded-2xl shadow-lg flex items-center justify-center">
+                                <img src="images/cd2.png" alt="Undiksha Logo" class="rounded-2xl w-full h-full object-cover">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Kolom Teks -->
+                <div>
+                    <h3 id="animated-fullname" class="text-lg font-bold text-blue-500 h-6 mb-1"></h3>
+                    <h2 class="text-4xl font-extrabold text-gray-900 mt-1 mb-4">About Me</h2>
+                    <p class="text-gray-600 leading-relaxed mb-8">
+                        I am a student at Undiksha majoring in Information System with a deep passion for the creative field. I believe that visual arts have the power to convey profound stories and emotions. Through photography, videography, and graphic design, I strive to combine the academic world with artistic expression to create meaningful work.
+                    </p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Main Skill</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-blue-100 text-blue-600 p-2 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg></span>
+                            <div>
+                                <h4 class="font-semibold">Photography</h4>
+                                <p class="text-sm text-gray-500">Portrait, Landscape</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <span class="bg-blue-100 text-blue-600 p-2 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m16 13 5.223 3.482a.5.5 0 0 1 0 .836L16 21V13Z"/><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M12 12h.01"/></svg></span>
+                            <div>
+                                <h4 class="font-semibold">Videography</h4>
+                                <p class="text-sm text-gray-500">Shooting, Editing</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                             <span class="bg-blue-100 text-blue-600 p-2 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.42 4.58a5.4 5.4 0 0 0-7.65 0l-.71.71a5.4 5.4 0 0 0 0 7.65l.71.71a5.4 5.4 0 0 0 7.65 0l4.24-4.24a5.4 5.4 0 0 0 0-7.65z"/><path d="m14.83 9.17 1.41-1.41a2.12 2.12 0 0 1 3 3L12 18l-4-4 6.83-6.83z"/></svg></span>
+                            <div>
+                                <h4 class="font-semibold">Graphic Design</h4>
+                                <p class="text-sm text-gray-500">Branding, Layout</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                             <span class="bg-blue-100 text-blue-600 p-2 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+                            <div>
+                                <h4 class="font-semibold">Software</h4>
+                                <p class="text-sm text-gray-500">Canva, Adobe, Figma</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Projects Section -->
+        <section id="projects" class="py-20 relative overflow-hidden initial-hidden">
+            <div class="grid-bg-about"></div>
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-12">My Projects</h2>
+                <div class="relative max-w-7xl mx-auto">
+                    <!-- Swiper Slider for Projects -->
+                    <div class="swiper project-slider p-4">
+                        <div class="swiper-wrapper">
+                            <!-- Project Slide 1 -->
+                            <div class="swiper-slide">
+                                <a href="https://drive.google.com/drive/folders/114QFLnYZPKzshtoo84dHJWCdWD85fBBD" target="_blank" rel="noopener noreferrer" class="project-card group block rounded-lg overflow-hidden shadow-lg relative aspect-[4/3]">
+                                    <img src="images/Axsara.jpeg" alt="Project AXSARA" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+                                    <div class="project-overlay absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-500 flex flex-col items-center justify-center p-4 text-center">
+                                        <h3 class="text-lg font-bold text-white opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Axsara Project</h3>
+                                        <p class="text-white text-sm mt-1 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">An operating system that features Balinese culture.</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <!-- Project Slide 2 -->
+                            <div class="swiper-slide">
+                                <a href="https://github.com/kenyawezt/DewataBot" target="_blank" rel="noopener noreferrer" class="project-card group block rounded-lg overflow-hidden shadow-lg relative aspect-[4/3]">
+                                    <img src="images/Dewa.png" alt="Dewata Bot" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+                                    <div class="project-overlay absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-500 flex flex-col items-center justify-center p-4 text-center">
+                                        <h3 class="text-lg font-bold text-white opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Dewata Bot</h3>
+                                        <p class="text-white text-sm mt-1 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">A chatbot for answering questions about Balinese souvenirs.</p>
+                                    </div>
+                                </a>
+                            </div>
+                             <!-- Project Slide 3 -->
+                            <div class="swiper-slide">
+                                <a href="https://drive.google.com/file/d/1dKQaJ3OI1YxmD-7xWml0tL67dQW48gON/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="project-card group block rounded-lg overflow-hidden shadow-lg relative aspect-[4/3]">
+                                    <img src="images/journal.png" alt="Journal Chatbot" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+                                    <div class="project-overlay absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-500 flex flex-col items-center justify-center p-4 text-center">
+                                        <h3 class="text-lg font-bold text-white opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Journal Chatbot</h3>
+                                        <p class="text-white text-sm mt-1 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">A scientific journal from the Dewata Bot chatbot project.</p>
+                                    </div>
+                                </a>
+                            </div>
+                             <!-- Project Slide 4 -->
+                            <div class="swiper-slide">
+                                <a href="https://drive.google.com/file/d/1jalTMDP_eZn2oVz8O1v2T5dTV_1YGAQC/view" target="_blank" rel="noopener noreferrer" class="project-card group block rounded-lg overflow-hidden shadow-lg relative aspect-[4/3]">
+                                    <img src="images/Nexus.png" alt="Nexuscharge" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110">
+                                    <div class="project-overlay absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-500 flex flex-col items-center justify-center p-4 text-center">
+                                        <h3 class="text-lg font-bold text-white opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">Nexuscharge</h3>
+                                        <p class="text-white text-sm mt-1 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-100">A prototype for finding the nearest electric vehicle charging station.</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation Buttons for Project Slider -->
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Portofolio Section -->
+        <section id="portofolio" class="py-20 relative overflow-hidden initial-hidden">
+            <div class="halftone-bg"></div>
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-6">My Portfolio</h2>
+                
+                <!-- Filter Buttons - Reordered -->
+                <div class="flex flex-wrap justify-center gap-2 md:gap-4 mb-10">
+                    <button class="filter-btn active" data-filter="desain">Graphic Design</button>
+                    <button class="filter-btn" data-filter="fotografi">Photography</button>
+                    <button class="filter-btn" data-filter="videografi">Videography</button>
+                </div>
+
+                <!-- Portfolio Grid - Reordered and initial hidden states adjusted -->
+                <div id="portfolio-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Graphic Design (Default active) -->
+                    <div class="portfolio-item group" data-category="desain"><img src="images/GD1.jpg" alt="Desain 1" class="rounded-lg shadow-md w-full h-full object-cover"></div>
+                    <div class="portfolio-item group" data-category="desain"><img src="images/GD2.jpg" alt="Desain 2" class="rounded-lg shadow-md w-full h-full object-cover"></div>
+                    <div class="portfolio-item group" data-category="desain"><img src="images/GD4.jpg" alt="Desain 3" class="rounded-lg shadow-md w-full h-full object-cover"></div>
+                    <div class="portfolio-item group" data-category="desain"><img src="images/GD3.jpg" alt="Desain 4" class="rounded-lg shadow-md w-full h-full object-cover"></div>
+
+                    <!-- Photography -->
+                    <div class="portfolio-item group hidden" data-category="fotografi"><img src="images/pg.jpg" alt="Fotografi 1" class="rounded-lg shadow-md w-full h-full object-cover"></div>
+                    <div class="portfolio-item group hidden" data-category="fotografi"><img src="images/pg4.jpg" alt="Fotografi 2" class="rounded-lg shadow-md w-full h-full object-cover"></div>
+                    <div class="portfolio-item group hidden" data-category="fotografi"><img src="images/pg2.jpg" alt="Fotografi 3" class="rounded-lg shadow-md w-full h-full object-cover"></div>
+                    
+                    <!-- Videography (Link ke YouTube) -->
+                    <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank" rel="noopener noreferrer" class="portfolio-item group hidden" data-category="videografi">
+                        <div class="relative">
+                            <img src="images/vid1.png" alt="Videografi 1" class="rounded-lg shadow-md w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition duration-300 flex items-center justify-center rounded-lg">
+                                <svg class="w-16 h-16 text-white opacity-0 group-hover:opacity-100 transform scale-75 group-hover:scale-100 transition duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M7 4V20L20 12L7 4Z"></path></svg>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Organizational Experience Section -->
+        <section id="experience" class="py-20 relative overflow-hidden initial-hidden">
+            <div class="halftone-bg"></div> <!-- Menggunakan halftone-bg yang sama dengan portofolio section -->
+            <div class="container mx-auto px-6 relative z-10">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-12 text-center">Organizational Experience</h2>
+                <!-- Swiper Slider -->
+                <div class="swiper experience-slider relative max-w-5xl mx-auto p-4">
+                    <div class="swiper-wrapper">
+                        <!-- Slide 1: Lensa Foursma -->
+                        <div class="swiper-slide">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                                <!-- Ganti gambar Lensa Foursma di sini -->
+                                <img src="images/Lensa.png" alt="Lensa Foursma" class="rounded-lg shadow-md w-full">
+                                <div class="text-left">
+                                    <h3 class="font-amsterdam text-6xl mb-4 text-gray-800">Lensa Foursma</h3>
+                                    <p class="text-gray-600 mb-4">
+                                        As a member of the photography division, I was responsible for documenting various school events while enhancing my technical skills in photography.
+                                    </p>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                        <li>Documented school events through photography for archival and publication purposes.</li>
+                                        <li>Collaborated with the videography team to produce creative content.</li>
+                                        <li>Achieved 3rd Place in a Short Film Competition with the theme of strategies to improve regional economic growth.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Slide 2: Study Club -->
+                        <div class="swiper-slide">
+                           <div class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                                <!-- Ganti gambar Study Club di sini -->
+                                <img src="images/SC1.JPG" alt="Study Club" class="rounded-lg shadow-md w-full">
+                                <div class="text-left">
+                                    <h3 class="font-amsterdam text-6xl mb-4 text-gray-800">Study Club</h3>
+                                    <p class="text-gray-600 mb-4">
+                                       As a member of Unit of Media & Communication (Design Team), I was responsible for creating visual content to support the club’s communication and engagement activities. My role focused on designing Instagram feeds and educational content that effectively delivered information in a creative and appealing way.
+                                    </p>
+                                    <ul class="list-disc list-inside text-gray-600 space-y-2">
+                                        <li>Designed Instagram feed posts about competitions and trivia related to the club’s sub-units.</li>
+                                        <li>Created informative visual content to promote upcoming competitions and events.</li>
+                                        <li>Developed educational content to support members’ learning and increase public engagement with the club’s activities.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+        </section>
+
+         <!-- 6. Achievements Section -->
+        <section id="achievements" class="py-20 bg-white relative overflow-hidden initial-hidden">
+            <div class="halftone-bg-achievements"></div>
+            <div class="container mx-auto px-6 text-center relative">
+                <h2 class="text-4xl font-extrabold text-gray-900 mb-12">Achievements & Certificates</h2>
+                 <div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+                    <!-- Ganti URL sertifikat di data-src -->
+                    <div class="achievement-card border border-gray-200 p-6 rounded-lg flex items-start space-x-4 bg-white/50 backdrop-blur-sm cursor-pointer transition duration-300 hover:shadow-xl hover:-translate-y-1" data-src="images/cr1.png">
+                        <span class="bg-yellow-100 text-yellow-600 p-2 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15a6 6 0 0 0 8.7 8.7 6 6 0 0 0-8.7-8.7c-1.2.8-2.5 1.3-4 1.3H3v4c.8 0 1.5.2 2.2.5"/><path d="M12 6a6 6 0 0 1 8.7 8.7 6 6 0 0 1-8.7-8.7c-1.2.8-2.5 1.3-4 1.3H3v4c.8 0 1.5.2 2.2.5"/></svg></span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">Intellectual Property</h3>
+                            <p class="text-gray-500 text-sm">Publication related to the "AXSARA PROJECT," a national patent/simple patent in the field of appropriate technology.</p>
+                        </div>
+                    </div>
+                     <!-- Ganti URL sertifikat di data-src -->
+                    <div class="achievement-card border border-gray-200 p-6 rounded-lg flex items-start space-x-4 bg-white/50 backdrop-blur-sm cursor-pointer transition duration-300 hover:shadow-xl hover:-translate-y-1" data-src="images/cr2.png">
+                        <span class="bg-blue-100 text-blue-600 p-2 rounded-full"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></span>
+                        <div>
+                            <h3 class="text-lg font-semibold text-gray-900 mb-1">PKM Competition</h3>
+                            <p class="text-gray-500 text-sm">Achieved 3rd Place in the FBS CUP at Undiksha.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galeri Sertifikat Tambahan -->
+                <h3 class="text-3xl font-bold text-gray-800 mt-16 mb-8">Other Certificates</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Ganti data-src dengan URL sertifikat Anda -->
+                    <div class="certificate-item cursor-pointer group" data-src="images/cr3.png">
+                        <img src="images/cr3.png" alt="Sertifikat 1" class="rounded-lg shadow-md w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="certificate-item cursor-pointer group" data-src="images/cr3.png">
+                        <img src="images/cr3.png" alt="Sertifikat 2" class="rounded-lg shadow-md w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                    <div class="certificate-item cursor-pointer group" data-src="images/cr3.png">
+                        <img src="images/cr3.png" alt="Sertifikat 3" class="rounded-lg shadow-md w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- 7. Footer & Kontak -->
+    <footer id="kontak" class="py-16">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl font-extrabold text-gray-900 mb-2">Get In Touch</h2>
+            <p class="text-gray-500 mb-6">Find me on the following platforms.</p>
+            <div class="flex justify-center items-center space-x-6 mb-8">
+                <!-- LinkedIn Icon -->
+                <a href="https://www.linkedin.com/in/wahyu-alpha-740968383?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" target="_blank" class="text-gray-400 hover:text-blue-600 transition">
+                     <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <!-- Instagram Icon -->
+                <a href="https://www.instagram.com/wahyualpha_/" target="_blank" class="text-gray-400 hover:text-pink-600 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <!-- GitHub Icon -->
+                <a href="https://github.com/kenyawezt" target="_blank" class="text-gray-400 hover:text-gray-800 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+                <!-- Email Icon -->
+                <a href="mailto:wahyualpha23@gmail.com" class="text-gray-400 hover:text-red-500 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+             <!-- Ganti '#' dengan URL ke file CV Anda dan tambahkan atribut download -->
+            <a href="https://drive.google.com/uc?export=download&id=1eS40xuvPeiD5BKaXB6CgLHw3hpHj91jg" download="CV-Kadek-Wahyu-Alpha.pdf" class="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300 inline-block text-lg shadow-md hover:shadow-lg">
+                Download CV
+            </a>
+            <p class="text-gray-400 text-sm mt-12">&copy; 2025 Wahyu Alpha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <div id="certificateModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-end justify-center z-50 transition-opacity duration-300">
+        <div class="bg-white p-2 rounded-t-lg max-w-4xl w-full max-h-[90vh] overflow-auto relative transform transition-transform duration-500 ease-in-out translate-y-full">
+            <button id="closeModal" class="absolute top-2 right-2 text-gray-600 bg-gray-200 rounded-full h-8 w-8 flex items-center justify-center text-xl font-bold z-10">&times;</button>
+            <img id="modalImage" src="" alt="Sertifikat" class="w-full h-auto rounded">
+        </div>
+    </div>
+
+    <!-- SwiperJS Script -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
+
